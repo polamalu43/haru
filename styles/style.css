@@ -1,0 +1,702 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: .875rem;
+  letter-spacing: .01em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#body.scroll_hidden {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.btn-group {
+  min-width: 200px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.btn-group .btn {
+  display: inline-block;
+  color: #000;
+  background: url("../images/sp/common_arrow05.png") no-repeat 91% center #fff;
+  background-size: 8px auto;
+  background-color: #fff;
+  padding: .6em 30px;
+  width: 70%;
+}
+
+header {
+  width: 100%;
+  background: #000;
+  height: 55px;
+  position: fixed;
+  top: 0;
+  border-bottom: 2px #1f3a9d solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999;
+  max-width: 800px;
+}
+
+.menu_bar {
+  position: relative;
+  width: inherit;
+}
+
+.menu_bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu_bar ul li:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menu_bar ul li:nth-child(1) a {
+  display: block;
+}
+
+.menu_bar ul li:nth-child(1) a img {
+  width: auto;
+  height: 24px;
+}
+
+.menu_bar ul li:not(:nth-child(1)) a {
+  display: block;
+  width: 54px;
+  height: 53px;
+  padding: 8px 9px;
+}
+
+.menu_bar ul li:not(:nth-child(1)) a img {
+  width: 100%;
+}
+
+.menu_bar ul li:nth-of-type(n+2):nth-of-type(-n+3) {
+  background-color: #777;
+  margin-right: 2px;
+}
+
+.menu_bar ul li:nth-child(4) {
+  background-color: #1f3a9d;
+  overflow: hidden;
+}
+
+#navi_btn img.change_img {
+  margin-top: -84px;
+}
+
+#navi_panel {
+  margin: 55px auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #222;
+  visibility: hidden;
+  position: fixed;
+  overflow: scroll;
+  opacity: 0;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  z-index: 999;
+  max-width: 800px;
+}
+
+#navi_panel ul li {
+  border-bottom: 1px #3d3d3d solid;
+}
+
+#navi_panel ul li a {
+  display: block;
+  padding: 14px 24px;
+  color: #fff;
+}
+
+#navi_panel ul:nth-child(2) {
+  background: #1f3a9d;
+}
+
+#navi_panel ul:nth-child(2) li {
+  border-bottom: 1px #fff solid;
+}
+
+#navi_panel .search {
+  padding: 14px 24px;
+  color: #fff;
+}
+
+#navi_panel.show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  z-index: 999;
+}
+
+main {
+  width: 100%;
+  opacity: 1;
+}
+
+#main.hidden {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  overflow: hidden;
+}
+
+.top_swiper {
+  margin-top: 55px;
+}
+
+.top_img {
+  width: 100%;
+}
+
+.banner_swiper {
+  background-color: #0f2e61;
+}
+
+.banner_swiper .swiper-wrapper {
+  padding: 1.3em 0;
+}
+
+.banner_swiper .swiper-wrapper .swiper-slide {
+  width: 70%;
+}
+
+.banner_link {
+  display: block;
+}
+
+.banner_link img {
+  width: 100%;
+}
+
+.guide_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #eee;
+  width: 100%;
+  padding: 1em 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.guide_container ul {
+  width: 33.33%;
+}
+
+.guide_container ul li {
+  text-align: center;
+  padding: 0 5px;
+}
+
+.guide_container ul li a {
+  display: block;
+  border-radius: 10px;
+  padding: 1.4em 5px;
+  font-size: .625rem;
+  background-color: #fff;
+}
+
+.guide_container ul li a::before {
+  content: "";
+  display: block;
+  background-image: url("../images/sp/common_icon_school-guide.png");
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+  margin: 0 auto .4em;
+}
+
+.guide_container ul .document a::before {
+  content: "";
+  width: 49px;
+  height: 47px;
+  background-position: 0px 0px;
+}
+
+.guide_container ul .opencampus a::before {
+  content: "";
+  width: 48px;
+  height: 47px;
+  background-position: 0 -55px;
+}
+
+.guide_container ul .contact a::before {
+  content: "";
+  width: 50px;
+  height: 47px;
+  background-position: 0 -118px;
+}
+
+section {
+  margin: 0;
+  padding: 5em 0 2.5em;
+  border: none;
+  color: #fff;
+}
+
+#feature {
+  background-color: #1f3a9d;
+}
+
+#course {
+  background-color: #333;
+}
+
+#lesson {
+  background-color: #f0b92b;
+}
+
+#about-school {
+  background-color: #cf689f;
+}
+
+.contents-inner {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.areatop-heading {
+  font-size: 1.25rem;
+  margin-bottom: 2em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.areatop-heading .animate {
+  font-size: 1.25rem;
+  display: inline-block;
+  position: relative;
+  padding: .8em 20px;
+  background-color: rgba(31, 58, 157, 0);
+}
+
+.areatop-heading .animate::before, .areatop-heading .animate::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+}
+
+.areatop-heading .animate::before {
+  content: "";
+  top: 0;
+  left: 0;
+  background-position: 0 0;
+  background-image: url(../images/sp/common_parts06.png);
+}
+
+.areatop-heading .animate::after {
+  content: "";
+  bottom: 0;
+  right: 0;
+  background-position: 0 -10px;
+  background-image: url(../images/sp/common_parts06.png);
+}
+
+.feiature-image {
+  margin: 0 0 1.5em;
+}
+
+.feiature-image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.employment-rate {
+  margin-bottom: 3em;
+}
+
+.employment-rate img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#employment-company {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 20%;
+  margin-bottom: 2em;
+}
+
+#employment-company ul, #employment-company .notice {
+  position: relative;
+  z-index: 2;
+  border-left: 1px solid #fff;
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+
+#employment-company ul li, #employment-company .notice li {
+  font-size: .7rem;
+  padding: .2em 0;
+}
+
+#employment-company .notice {
+  font-size: .625rem;
+  margin-top: -4px;
+  padding-top: 10px;
+  margin-bottom: 5em;
+  line-height: 1.4em;
+}
+
+#employment-company .btn-group {
+  margin-top: 6em;
+}
+
+.title {
+  font-size: .875rem;
+  text-align: center;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+.title span {
+  border: 1px solid #fff;
+  padding: 3px 20px;
+}
+
+.sp-image {
+  position: absolute;
+  bottom: 4em;
+  right: -20px;
+  z-index: 0;
+}
+
+.sp-image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#actual-results {
+  margin-bottom: 4.5em;
+}
+
+#actual-results h3 {
+  margin-bottom: 1.3em;
+}
+
+#actual-results h3 img {
+  max-width: 87%;
+}
+
+#actual-results p {
+  line-height: 1.8;
+  font-size: .75rem;
+  margin: 0 0 1.4em 0;
+}
+
+#actual-results figure img {
+  width: 100%;
+}
+
+#satisfaction h3 {
+  margin-bottom: 1.3em;
+}
+
+#satisfaction h3 img {
+  max-width: 87%;
+}
+
+#satisfaction p {
+  line-height: 1.8;
+  font-size: .75rem;
+  margin: 0 0 1.4em 0;
+}
+
+#satisfaction figure {
+  text-align: center;
+}
+
+#satisfaction figure img {
+  width: 70%;
+}
+
+.lead {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.lead img {
+  max-width: 90%;
+}
+
+#course-navi ul li {
+  margin-bottom: 4em;
+}
+
+.image {
+  display: block;
+}
+
+.image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.text {
+  padding: .8em 0;
+  line-height: 1.8;
+  font-size: .875rem;
+}
+
+.btn-group2 {
+  text-align: center;
+}
+
+.btn-group2 .btn2 {
+  display: inline-block;
+  padding: .6em 30px;
+  min-width: 200px;
+  font-size: .9rem;
+  text-align: center;
+  border: 1px #fff solid;
+  color: #fff;
+  background: url(../images/sp/common_arrow06.png) no-repeat 91% center;
+  background-size: 8px auto;
+}
+
+.title2 {
+  font-size: .875rem;
+  margin-bottom: 1em;
+  color: #1f3a9d;
+  text-align: center;
+  font-weight: bold;
+}
+
+.seminar, .casestudy {
+  margin-bottom: 1.5em;
+}
+
+.seminar figure, .casestudy figure {
+  width: 100%;
+}
+
+.seminar figure img, .casestudy figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.seminar .text, .casestudy .text {
+  width: 100%;
+  padding: 1.8em 20px;
+  background-color: #fff;
+  color: #212121;
+}
+
+.seminar .text .wrap .title2, .casestudy .text .wrap .title2 {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+}
+
+.seminar .text .wrap .title2 span, .casestudy .text .wrap .title2 span {
+  font-size: .65em;
+  display: block;
+  font-weight: normal;
+}
+
+.seminar .text .wrap p, .casestudy .text .wrap p {
+  font-size: .75rem;
+  margin-bottom: .75rem;
+}
+
+.seminar .text .wrap .btn-group3, .casestudy .text .wrap .btn-group3 {
+  text-align: center;
+}
+
+.seminar .text .wrap .btn-group3 .btn3, .casestudy .text .wrap .btn-group3 .btn3 {
+  display: inline-block;
+  padding: .5em 30px;
+  min-width: 200px;
+  font-size: 13px;
+  font-size: .8125rem;
+  background-size: 5px auto;
+  border: 1px #000 solid;
+  color: #000;
+  background: url(../images/sp/common_arrow05.png) no-repeat 91% center;
+  background-size: 5px auto;
+}
+
+#guarantee-system {
+  margin: 4.5em 0 1em;
+}
+
+#guarantee-system .gs_heading {
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  font-size: .875rem;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+#guarantee-system .gs_heading::before {
+  content: "";
+  width: 40px;
+  display: block;
+  background-color: #000;
+  height: 2px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+#guarantee-system .btn-group {
+  margin: 2em 0 4em;
+}
+
+.guarantee_swiper ol li {
+  text-align: center;
+}
+
+.guarantee_swiper ol li p {
+  text-align: left;
+  display: inline-block;
+  color: #212121;
+  font-size: .75rem;
+  margin: 0 auto;
+}
+
+.guarantee_swiper ol li:nth-child(2) .title_circle::before {
+  content: "02";
+}
+
+.guarantee_swiper ol li:nth-child(3) .title_circle::before {
+  content: "03";
+}
+
+.title_circle {
+  color: #f39700;
+  font-size: .875rem;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1em;
+  background: url(../images/sp/common_bg03.png) repeat rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 2px 3px #bbb;
+          box-shadow: 0px 2px 3px #bbb;
+  position: relative;
+}
+
+.title_circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+.title_circle::before {
+  content: "01";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.halCross_image a img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#about-school {
+  padding: 4em 0;
+}
+
+#about-school .contents-inner figure {
+  margin-bottom: 1em;
+}
+
+#about-school .contents-inner figure img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#about-school .contents-inner .certification, #about-school .contents-inner .access {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#about-school .contents-inner .certification div, #about-school .contents-inner .access div {
+  margin-bottom: 1em;
+}
+
+#about-school .contents-inner .certification div img, #about-school .contents-inner .access div img {
+  width: 100%;
+  max-width: 76%;
+}
+
+#about-school .contents-inner .certification p, #about-school .contents-inner .access p {
+  text-align: left;
+  font-size: .75rem;
+  line-height: 1.8em;
+  margin-bottom: 1em;
+}
+
+#about-school .contents-inner .certification p small, #about-school .contents-inner .access p small {
+  display: inline-block;
+  line-height: 1.8em;
+}
+
+#about-school .contents-inner .access {
+  margin-top: 3em;
+}
+
+#about-school .contents-inner .access .text {
+  font-size: .9rem;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 2.5em;
+}
+
+#about-school .contents-inner .access .text span {
+  font-weight: 900;
+  font-size: 2.6rem;
+}
+
+footer {
+  position: relative;
+  color: #fff;
+  background-color: #1d1d1d;
+  padding: 60px 0 20px;
+}
+
+footer #copyright {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
